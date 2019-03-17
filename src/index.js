@@ -11,7 +11,7 @@ import allReducres from './components/reducers/index'
 import * as serviceWorker from './serviceWorker';
 const testReduc=()=>({id:'1',pass:'12345'});
 const store =createStore(allReducres);
-
+console.log('store.getState()',store.getState())
 const testReducerr=()=>({id:'1',pass:'12345'});
 
 ReactDOM.render(<Provider store={store}><BrowserRouter ><MyRouter /></BrowserRouter></Provider>, document.getElementById('root'));

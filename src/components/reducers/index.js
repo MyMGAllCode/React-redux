@@ -4,8 +4,10 @@ import loginReducer from './loginReducer';
 
 const testReducerr=()=>({id:'1',pass:'12345'});
 const allReducres=combineReducers({
-    test:testReducerr,
+    //test:testReducerr,
    // loginReducer:loginReducer
+   testReducerr,
+   loginReducer
 
 });
 console.log('loginReducer',loginReducer);

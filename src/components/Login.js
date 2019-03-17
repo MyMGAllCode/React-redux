@@ -51,7 +51,7 @@ class Login extends Component {
       <label>Password:</label>
       <input type='password' name='secret' onKeyPress={this.handleInput} /><br/><br/>
       <span style={{'color':'red'}}>{this.state.loginErr}</span><br/><br/>
-      <span style={{'color':'red'}}>Id is:{this.props.id}</span><br/><br/>
+      <span style={{'color':'red'}}>Id is:{this.props.testReducerr}</span><br/><br/>
       <button onClick={this.handleLogin}>Login</button>  
       </div>
     );
@@ -59,13 +59,14 @@ class Login extends Component {
 }
 //Mapthe state to the props to access directly by props
 function mapStateToProps(state){
+    console.log('statestatestate',state);
     return{
         id:state.id
     };
 }
 //huckup these action with redux so can accessible from props
-function matchDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch){
     return bindActionCreators({loginAction:loginAction},dispatch);
 }
 
-export default connect(mapStateToProps,matchDispatchToProps)(Login);
+export default connect(mapStateToProps,mapDispatchToProps)(Login);
